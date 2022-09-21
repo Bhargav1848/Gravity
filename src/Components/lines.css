@@ -1,0 +1,518 @@
+.lines {
+    /* position: relative; */
+    overflow: hidden;
+    width: 100vw;
+    margin: 120px auto;
+    background-color: red;
+    /* z-index: -200; */
+}
+
+.line1 {
+    width: 97%;
+    position: absolute;
+    height: 40%;
+    display: none;
+    border-radius: 50%;
+    border: 4px solid black;
+    transform: rotateX(20deg);
+    transform: skewX(1deg);
+    background-color: transparent;
+    /* z-index: 300; */
+}
+
+.line2 {
+    width: 97%;
+    margin: 20px;
+    position: absolute;
+    height: 45%;
+    /* display: none; */
+    background-color: transparent;
+    border-radius: 50%;
+    border: 4px dashed black;
+    transform: rotateX(20deg);
+    transform: skewY(-4deg);
+    /* z-index: -100; */
+}
+
+.weight__text {
+    /* position: absolute; */
+    /* top: -10%; */
+    transform: translateY(-50px);
+    font-size: large;
+    font-weight: 800;
+    color: white;
+    width: 80px;
+    margin: auto;
+}
+
+.shape {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.4);
+    /* z-index: -4; */
+    transform: translateY(100px);
+    transition: all 0.4s;
+    animation: animateEarth 10s infinite linear, moveEarth 80s infinite linear, forMoon 10s infinite linear;
+}
+
+
+/*!EARTH CSS*/
+
+.earth {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    /* background: url("C:\Users\asus\Downloads\Paradigm Shifts in Global Missions Every Christian Should Know - Seedbed.jpg"); */
+    background: url("http://s2.thingpic.com/images/ji/uShLHTVuCnvBveVGx4LsLLwx.jpeg");
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-repeat: repeat-x;
+    z-index: -1;
+    transform: translateY(100px);
+    transition: all 0.4s;
+    animation: animateEarth 40s infinite linear, moveEarth 80s infinite linear;
+}
+
+@keyframes animateEarth {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1500px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+@keyframes moveEarth {
+    0% {
+        transform: translate(2%, 80);
+    }
+    35% {
+        transform: translate(50vw, 300px);
+    }
+    50% {
+        transform: translate(87vw, 140px);
+    }
+    65% {
+        transform: translate(87vw, -50px);
+    }
+    75% {
+        transform: translate(50vw, -50px);
+    }
+    90% {
+        transform: translate(1vw, 40px);
+    }
+    100% {
+        transform: translateX(0, 40px);
+    }
+}
+
+
+/*!End*/
+
+
+/*!MOON CSS*/
+
+.moon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-color: rgb(138, 136, 136);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50vh rgb(46, 46, 45), 0 0 50vh rgb(46, 46, 45), 0 0 50vh rgb(46, 46, 45);
+    transform: translateY(-200px);
+    transition: all 0.4s;
+    z-index: -4 !important;
+    background: url("https://images.immediate.co.uk/production/volatile/sites/25/2019/02/TYCHO-27e2a02-e1603190530561.jpg");
+    animation: moveMoon 5s infinite linear, animateMoon 10s infinite linear;
+}
+
+@keyframes forMoon {
+    0% {
+        z-index: 3;
+    }
+    35% {
+        z-index: 3;
+    }
+    55% {
+        z-index: -2;
+    }
+    100% {
+        z-index: -3;
+    }
+}
+
+@keyframes moveMoon {
+    0% {
+        transform: translate(20px, -60px);
+        z-index: 200;
+    }
+    25% {
+        transform: translate(20px, 20px);
+        z-index: -2;
+    }
+    75% {
+        transform: translate(20px, 100px);
+        z-index: 200;
+    }
+    100% {
+        transform: translate(20px, -60px);
+        z-index: -300;
+    }
+}
+
+@keyframes animateMoon {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1024px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+
+/*!END*/
+
+
+/*!SUN CSS*/
+
+.sun {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    background: url("https://s3.envato.com/files/103508277/SolarSurface_FHD_Crop%202%20(0-00-00-00).jpg");
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 100vw rgba(243, 76, 4, 1), 0 0 100vw rgb(255, 34, 0), 0 0 100vw rgb(252, 84, 12);
+    background-size: cover;
+    background-repeat: repeat-x;
+    z-index: 200;
+    transform: translate(46vw, 80px);
+    transition: all 0.4s;
+    /* opacity: 0.8; */
+    animation: animateSun 50s infinite linear;
+}
+
+@keyframes animateSun {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -640px 0;
+    }
+}
+
+
+/*!END*/
+
+
+/*!MERCURY CSS*/
+
+.mercury {
+    width: 25px;
+    height: 25px;
+    transform: translate(50vw, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    /* background-color: rgb(234, 121, 121); */
+    z-index: -1;
+    background: url("https://airandspace.si.edu/webimages/carousels/540/WEB12156-2011_carousel1.jpg");
+    /* transform: translateY(100px); */
+    transition: all 0.4s;
+    animation: animateMercury 10s infinite linear, moveMercury 20s infinite linear;
+    ;
+}
+
+@keyframes moveMercury {
+    0% {
+        transform: translate(50vw, 20vh);
+    }
+    25% {
+        transform: translate(70vw, 20vh);
+    }
+    50% {
+        transform: translate(50vw, 20vh);
+    }
+    60% {
+        z-index: 300;
+        transform: translate(40vw, 20vh);
+    }
+    75% {
+        transform: translate(30vw, 20vh);
+    }
+    100% {
+        transform: translateX(50vw, 20vh);
+    }
+}
+
+@keyframes animateMercury {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -540px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+
+/*!END*/
+
+
+/*!Venus CSS*/
+
+.venus {
+    width: 30px;
+    height: 30px;
+    transform: translate(70vw, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    /* background-color: rgb(234, 121, 121); */
+    z-index: -3;
+    background: url("https://www.writersreserve.com/wp-content/uploads/00A-BG-PT2-Venus.jpg");
+    /* transform: translateY(100px); */
+    transition: all 0.4s;
+    animation: animateVenus 45s infinite linear, moveVenus 10s infinite linear;
+}
+
+@keyframes moveVenus {
+    0% {
+        transform: translate(70vw, 20vh);
+    }
+    25% {
+        transform: translate(50vw, 20vh);
+    }
+    50% {
+        transform: translate(20vw, 20vh);
+    }
+    70% {
+        z-index: 300;
+        transform: translate(50vw, 20vh);
+    }
+    100% {
+        z-index: 300;
+        transform: translate(70vw, 20vh);
+    }
+}
+
+@keyframes animateVenus {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1024px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+
+/*!END*/
+
+
+/*!Mars CSS*/
+
+.mars {
+    width: 70px;
+    height: 70px;
+    transform: translate(0vw, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    z-index: -3;
+    background: url("https://www.unlockthelaw.co.uk/images/mars-water.jpg");
+    transition: all 0.4s;
+    animation: animateMars 6s infinite linear, moveEarth 100s infinite linear;
+}
+
+@keyframes animateMars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1024px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+
+/*!END*/
+
+
+/*!Jupiter CSS*/
+
+.jupiter {
+    width: 170px;
+    height: 170px;
+    transform: translate(0vw, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    background: url("https://cdn.spacetelescope.org/archives/images/wallpaper3/heic1914b.jpg");
+    transition: all 0.4s;
+    transition-delay: 30s;
+    animation: animateJupiter 60s infinite linear, moveJupiter 200s infinite linear;
+}
+
+@keyframes animateJupiter {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1024px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+@keyframes moveJupiter {
+    0% {
+        transform: translate(2%, 80);
+    }
+    35% {
+        transform: translate(50vw, 270px);
+    }
+    50% {
+        transform: translate(87vw, 140px);
+    }
+    65% {
+        transform: translate(87vw, -50px);
+    }
+    75% {
+        transform: translate(50vw, -50px);
+    }
+    90% {
+        transform: translate(1vw, 40px);
+    }
+    100% {
+        transform: translateX(0, 40px);
+    }
+}
+
+
+/*!END*/
+
+
+/*!Saturn CSS*/
+
+.saturn {
+    width: 120px;
+    height: 120px;
+    transform: translate(0, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    z-index: 500;
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81489289-1945-47f9-b17e-b811bd2e2da4/deb904u-fe109116-f9c8-4b24-ad5f-d6978b2a95a8.png/v1/fill/w_1280,h_640,q_80,strp/saturn_texture_map_by_john_van_vliet_by_squee333_deb904u-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6IlwvZlwvODE0ODkyODktMTk0NS00N2Y5LWIxN2UtYjgxMWJkMmUyZGE0XC9kZWI5MDR1LWZlMTA5MTE2LWY5YzgtNGIyNC1hZDVmLWQ2OTc4YjJhOTVhOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4D84oLyZo4LT4h-4H17x4SuHZmEYobljhr-Ujrtu-Tc");
+    transition: all 0.4s;
+    animation-delay: 20s;
+    animation: animateSaturn 2s infinite linear, moveSaturn 400s infinite linear;
+}
+
+@keyframes animateSaturn {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1028px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+@keyframes moveSaturn {
+    0% {
+        transform: translate(2%, 80);
+    }
+    35% {
+        transform: translate(50vw, 270px);
+    }
+    50% {
+        transform: translate(87vw, 140px);
+    }
+    65% {
+        transform: translate(87vw, -50px);
+    }
+    75% {
+        transform: translate(50vw, -50px);
+    }
+    90% {
+        transform: translate(1vw, 40px);
+    }
+    100% {
+        transform: translateX(0, 40px);
+    }
+}
+
+
+/*!END*/
+
+
+/*!Uranus CSS*/
+
+.uranus {
+    width: 60px;
+    height: 60px;
+    transform: translate(0, 20vh);
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.9);
+    z-index: 500;
+    background: url("https://solarviews.com/browse/uranus/uranuscyl1.jpg");
+    transition: all 0.4s;
+    animation-delay: 20s;
+    animation: animateJupiter 20s infinite linear, moveSaturn 30s infinite linear;
+}
+
+@keyframes animateJupiter {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 720px 0;
+        /* background-position: -600px 0; */
+    }
+}
+
+@keyframes moveSaturn {
+    0% {
+        transform: translate(2%, 80);
+    }
+    35% {
+        transform: translate(50vw, 270px);
+    }
+    50% {
+        transform: translate(87vw, 140px);
+    }
+    65% {
+        transform: translate(87vw, -50px);
+    }
+    75% {
+        transform: translate(50vw, -50px);
+    }
+    90% {
+        transform: translate(1vw, 40px);
+    }
+    100% {
+        transform: translateX(0, 40px);
+    }
+}

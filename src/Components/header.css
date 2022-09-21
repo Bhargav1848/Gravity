@@ -1,0 +1,71 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: url("https://www.esa.int/var/esa/storage/images/19716864-11-eng-GB/ESA_root_pillars.jpg");
+    /* background: url("https://cdn.pixabay.com/photo/2017/11/26/13/27/night-2978816_960_720.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__button {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px 10px;
+    border-color: cyan;
+    width: 100px;
+    background-color: transparent;
+    /* color: black; */
+    color: white;
+    font-weight: 600;
+    box-shadow: 2px 0.2px 1px 0.4px rgba(0, 0, 0, 0.4), -2px 0.2px 1px 0.4px rgba(0, 0, 0, 0.4);
+}
+
+.header__button:focus {
+    background-color: paleturquoise;
+    color: black;
+}
+
+.header__main {
+    box-sizing: border-box;
+    /* padding: 0px 20px; */
+    overflow: hidden;
+    width: 100vw;
+    /* z-index: 1000; */
+    margin: auto;
+}
+
+.all_buttons {
+    width: 100%;
+    background-color: transparent;
+    height: 50px;
+    margin: 20px 0px;
+}
+
+#main__input {
+    display: block;
+    font-size: large;
+    width: 250px;
+    margin: auto;
+    height: 30px;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: cyan;
+    box-shadow: 2px 0.2px 1px 0.4px rgba(0, 0, 0, 0.4), -2px 0.2px 1px 0.4px rgba(0, 0, 0, 0.4);
+}
+
+#main__input:focus {
+    outline: none;
+}
+
+@media only screen and (max-width:711px) {
+    .header__button {
+        margin: 2px 5px;
+        width: 90px;
+    }
+}
